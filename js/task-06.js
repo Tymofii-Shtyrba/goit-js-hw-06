@@ -1,9 +1,9 @@
 const validationInputRef = document.querySelector('#validation-input');
 
-const dataLengthValue = validationInputRef.getAttribute('data-length');
+const dataLengthValue = Number(validationInputRef.getAttribute('data-length'));
 
 validationInputRef.addEventListener('blur', () => {
-  if (validationInputRef.value.length >= dataLengthValue) {
+  if (validationInputRef.value.length === dataLengthValue) {
     validationInputRef.classList.add('valid');
 
   } else {
